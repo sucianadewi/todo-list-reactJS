@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: rgb(2, 50, 37);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-app {
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 600px;
+  background: #080f0a;
+  text-align: center;
+  margin: 130px auto;
+  border-radius: 16px;
+  padding-bottom: 34px;
+}
+
+h1 {
+  margin: 34px 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+  margin-bottom: 34px;
+}
+
+.todo-input {
+  padding: 14px 34px 14px 16px;
+  border-radius: 8px 0 0 8px;
+  border: 2px solid #556f0e;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #d4d0d0;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  outline: none;
+  background: rgb(91, 126, 26);
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid #556f0e;
+}
+
+.todo-button.edit {
+  background: rgb(91, 126, 26);
+  padding: 16px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 4px auto;
+  color: #fff;
+  border: 2px solid #2c2f29;
+  padding: 10px;
+  border-radius: 8px;
+  width: 80%;
+  background: transparent;
 }
 
-.App-link {
-  color: #61dafb;
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-icon {
+  color: rgb(171, 43, 14);
+}
+
+.edit-icon {
+  margin-right: 4px;
+  color: rgb(215, 207, 45);
+}
+
+.complete-icon {
+  margin-right: 4px;
+  color: rgb(45, 88, 228);
 }
